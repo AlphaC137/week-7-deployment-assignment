@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "start": "cd server && npm install && npm start"
+  },
   "dependencies": {
     "dotenv": "^17.2.0",
     "mongoose": "^8.16.3"

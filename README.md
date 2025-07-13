@@ -25,6 +25,22 @@ This project is a full-featured MERN stack Task Manager app, deployed with moder
 - **Backend**: Render (or Railway/Heroku)
 - **MongoDB**: Atlas (recommended for production)
 
+### Render Backend Deployment
+- Make sure your `server/package.json` has a `start` script: `"start": "node index.js"`
+- Set environment variables in Render dashboard (copy from `server/.env.example`)
+- Use the build command: `npm install` and start command: `npm start`
+- If you see `Cannot find module '/opt/render/project/src/server/index.js.'`, check for typos in the start command and ensure `index.js` is in the `server` folder.
+- For MongoDB Atlas, set `MONGODB_URI` to your Atlas connection string.
+
+### Vercel Frontend Deployment
+- Use the build command: `npm run build` in the `client` folder
+- Set `REACT_APP_API_URL` in Vercel environment variables to your backend URL
+
+### Troubleshooting
+- Check logs in Render/Vercel dashboard for errors
+- Ensure all environment variables are set
+- Make sure your start/build scripts are correct
+
 ## Monitoring & Logging
 - Winston and Morgan for backend logging
 - Sentry for error tracking (backend and frontend)
