@@ -1,4 +1,5 @@
 /* eslint-disable no-restricted-globals */
+// Luxury UI/UX and monitoring (Sentry) are enabled in this app. See src/index.js for details.
 
 // This service worker can be customized!
 // See https://developers.google.com/web/tools/workbox/modules
