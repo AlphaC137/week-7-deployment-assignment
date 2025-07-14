@@ -1,4 +1,10 @@
+
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Home from './pages/Home';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import TaskManager from './pages/TaskManager';
 import logo from './logo.svg';
 import './App.css';
 
