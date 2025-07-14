@@ -1,4 +1,7 @@
+
+// Initialize Sentry as early as possible
 require('./instrument.js');
+
 const errorHandler = require('./src/middleware/errorHandler');
 const express = require('express');
 const mongoose = require('mongoose');
@@ -10,11 +13,7 @@ const security = require('./src/middleware/security');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Sentry setup
-Sentry.init({
-  dsn: process.env.SENTRY_DSN || '',
-  tracesSampleRate: 1.0,
-});
+
 app.use(express.json());
 app.use(Sentry.Handlers.requestHandler());
 
