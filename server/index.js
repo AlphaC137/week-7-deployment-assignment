@@ -1,3 +1,4 @@
+require('./instrument.js');
 const errorHandler = require('./src/middleware/errorHandler');
 const express = require('express');
 const mongoose = require('mongoose');
