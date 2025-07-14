@@ -1,10 +1,17 @@
+
 .App {
   text-align: center;
+  font-family: 'Playfair Display', serif;
+  background: linear-gradient(135deg, #1a1a1a 0%, #3a2c0f 100%);
+  min-height: 100vh;
+  color: #e5c07b;
 }
+
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  filter: drop-shadow(0 0 10px #e5c07b);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -13,19 +20,123 @@
   }
 }
 
+
 .App-header {
-  background-color: #282c34;
+  background: rgba(26, 26, 26, 0.95);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: calc(12px + 2vmin);
+  color: #e5c07b;
+  border-bottom: 4px solid #bfa14a;
 }
 
+
 .App-link {
-  color: #61dafb;
+  color: #bfa14a;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.App-link:hover {
+  color: #e5c07b;
+  text-shadow: 0 0 8px #bfa14a;
+}
+
+nav {
+  background: rgba(26, 26, 26, 0.85);
+  padding: 1.5rem 0;
+  border-bottom: 2px solid #bfa14a;
+  margin-bottom: 2rem;
+}
+
+nav a {
+  color: #bfa14a;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  margin: 0 1.5rem;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #e5c07b;
+  text-shadow: 0 0 8px #bfa14a;
+}
+
+button {
+  background: linear-gradient(90deg, #bfa14a 0%, #e5c07b 100%);
+  color: #1a1a1a;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(191, 161, 74, 0.2);
+  cursor: pointer;
+  margin: 0.5rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #e5c07b 0%, #bfa14a 100%);
+  color: #3a2c0f;
+}
+
+input, select {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #bfa14a;
+  background: #222;
+  color: #e5c07b;
+  font-family: 'Playfair Display', serif;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+form {
+  background: rgba(26, 26, 26, 0.85);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(191, 161, 74, 0.15);
+  margin-bottom: 2rem;
+  display: inline-block;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: rgba(34, 28, 18, 0.85);
+  margin: 1rem 0;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(191, 161, 74, 0.08);
+  color: #e5c07b;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  color: #bfa14a;
+  margin-bottom: 1.5rem;
+  letter-spacing: 2px;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #e5c07b;
 }
 
 @keyframes App-logo-spin {
