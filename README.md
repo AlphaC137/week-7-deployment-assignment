@@ -76,8 +76,8 @@ This project is a full-featured MERN stack Task Manager app, deployed with moder
 - Sentry dashboard for error tracking
 
 ## URLs
-- Frontend: [your-frontend-url]
-- Backend: [your-backend-url]
+- Frontend: [https://week-7-deployment-assignment.vercel.app/](https://week-7-deployment-assignment.vercel.app/)
+- Backend: [https://week-7-deployment-assignment.onrender.com](https://week-7-deployment-assignment.onrender.com)
 
 ## Screenshots
 Add screenshots of your CI/CD pipeline and deployed app here.
