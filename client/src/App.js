@@ -8,15 +8,31 @@ import TaskManager from './pages/TaskManager';
 import logo from './logo.svg';
 import './App.css';
 
+
 function App() {
+  const navTabs = [
+    { name: 'Home', path: '/' },
+    { name: 'Login', path: '/login' },
+    { name: 'Register', path: '/register' },
+    { name: 'Task Manager', path: '/tasks' }
+  ];
+  const currentPath = window.location.pathname;
   return (
     <Router>
-      <nav>
-        <Link to="/">Home</Link> |{' '}
-        <Link to="/login">Login</Link> |{' '}
-        <Link to="/register">Register</Link> |{' '}
-        <Link to="/tasks">Task Manager</Link>
-      </nav>
+      <header className="lux-navbar">
+        <div className="lux-navbar-logo">TaskList Luxe Edition</div>
+        <nav className="lux-navbar-tabs">
+          {navTabs.map(tab => (
+            <Link
+              key={tab.name}
+              to={tab.path}
+              className={`lux-navbar-tab${currentPath === tab.path ? ' active' : ''}`}
+            >
+              {tab.name}
+            </Link>
+          ))}
+        </nav>
+      </header>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />

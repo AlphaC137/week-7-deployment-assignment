@@ -27,26 +27,30 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={e => setEmail(e.target.value)}
-          required
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={e => setPassword(e.target.value)}
-          required
-        />
-        <button type="submit">Login</button>
-      </form>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '70vh' }}>
+      <div className="lux-card" style={{ maxWidth: 400, width: '100%' }}>
+        <h2 style={{ fontFamily: 'Playfair Display, serif', fontSize: '2rem', color: '#D4AF37', marginBottom: '2rem', textAlign: 'center' }}>Welcome Back</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            className="lux-input"
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+            required
+          />
+          <input
+            className="lux-input"
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={e => setPassword(e.target.value)}
+            required
+          />
+          <button className="lux-btn" type="submit">Login</button>
+        </form>
+        {error && <p style={{ color: 'red', marginTop: '1rem' }}>{error}</p>}
+      </div>
     </div>
   );
 };
