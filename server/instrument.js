@@ -5,9 +5,7 @@ Sentry.init({
   sendDefaultPii: true,
   tracesSampleRate: 1.0,
   _experiments: { enableLogs: true },
-  integrations: [
-    Sentry.consoleLoggingIntegration({ levels: ["log", "error", "warn"] })
-  ]
+  integrations: []
 });
 
 module.exports = Sentry;
